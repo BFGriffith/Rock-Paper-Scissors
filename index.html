@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="en"><!--v0.0-->
+<html lang="en"><!--v0.1-->
 <!-- browser-sync start --server --directory --files='index.html, assets/styles/RPS_styles.css, assets/scripts/RPS.js' -->
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,6 +15,30 @@
 </head>
 
 <body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="p1Score">
+          <ul>
+            <li><span id="p1score"></span></li>
+            <li>wins&rarr; <span id="p1wins"></span></li>
+            <li>losses&rarr; <span id="p1losses"></span></li>
+          </ul>
+        </div>
+        <div class="p2score">
+          <ul>
+            <li><span id="p2score"></span></li>
+            <li>wins&rarr; <span id="p2wins"></span></li>
+            <li>losses&rarr; <span id="p2losses"></span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <h3 id="outcomeView"></h3>
+      </div>
+    </div>
+  </div>
 
   <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>-->
   <script type="text/javascript" src="assets/scripts/RPS.js"></script>
