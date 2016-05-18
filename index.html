@@ -1,12 +1,15 @@
-<!DOCTYPE html>
-<html lang="en"><!--v0.0-->
+<!DOCTYPE html><!--v0.2-->
+<html lang="en">
 <!-- browser-sync start --server --directory --files='index.html, assets/styles/RPS_styles.css, assets/scripts/RPS.js' -->
+<!-- https://r-p-sgame.firebaseio.com/ -->
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Rock-Paper-Scissors</title>
   <meta name="description" content="multiplayer Rock-Paper-Scissor game using Firebase">
   <meta name="author" content="BFGriffith">
+  <link href='https://fonts.googleapis.com/css?family=Piedra&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
   <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -14,6 +17,73 @@
 </head>
 
 <body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-10 col-xs-offset-1">
+        <h1>Rock-Paper-Scissors</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12" id="nameDiv">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Input your name here." id="nameIs">
+          <span class="input-group-btn"><button class="btn btn-default" type="button" id="addPlayer">Submit!</button></span>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <div class="row">
+      <div class="col-xs-4 col-xs-offset-4" id="RPS_buttons">
+        <span>
+          <button class="btn btn-default" type="button" id="rockButton">&#128142;</button>
+          <button class="btn btn-default" type="button" id="paperButton">&#128478;</button>
+          <button class="btn btn-default" type="button" id="scissorsButton">&#9988;</button>
+        </span>
+      </div>
+    </div>
+    <br>
+
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="p1Score">
+          <ul>
+            <li><span id="p1score"></span></li>
+            <li>wins&rarr; <span id="p1wins"></span></li>
+            <li>losses&rarr; <span id="p1losses"></span></li>
+          </ul>
+        </div>
+        <div class="p2score">
+          <ul>
+            <li><span id="p2score"></span></li>
+            <li>wins&rarr; <span id="p2wins"></span></li>
+            <li>losses&rarr; <span id="p2losses"></span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <h3 id="outcomeView"></h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <form>
+          <div class="form-group">
+            <label for="">
+              <h3>Chat Console:</h1></label>
+            <textarea class="form-control" rows="5" id="chatConsole" readonly>Waiting for players...</textarea>
+          </div>
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Taunt your opponent?" id="consoleInput">
+            <span class="input-group-btn"><button class="btn btn-default" type="button" id="submitText">Comment!</button></span>
+          </div>
+        </form>
+      </div>
+    </row>
+
+  </div><!--END-container-->
 
   <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>-->
   <script type="text/javascript" src="assets/scripts/RPS.js"></script>
