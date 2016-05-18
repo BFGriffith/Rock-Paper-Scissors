@@ -1,1 +1,14 @@
-* { text-decoration: none; }
+h1, h2, h3 {
+  font-family: 'Piedra', cursive;
+  text-align: center;
+}
+li { text-decoration: none; }
+#outcomeView {
+  padding: 1em 0;
+	font-weight: 2em;
+	text-align: center;
+}
+.chatMessages {
+  padding: 2em 0;
+	text-align: center;
+}
