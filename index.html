@@ -1,6 +1,5 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!--v0.2-->
 <html lang="en">
-<!--v0.1-->
 <!-- browser-sync start --server --directory --files='index.html, assets/styles/RPS_styles.css, assets/scripts/RPS.js' -->
 <!-- https://r-p-sgame.firebaseio.com/ -->
 
@@ -35,6 +34,18 @@
       </div>
     </div>
 
+    <br>
+    <div class="row">
+      <div class="col-xs-4 col-xs-offset-4" id="RPS_buttons">
+        <span>
+          <button class="btn btn-default" type="button" id="rockButton">&#128142;</button>
+          <button class="btn btn-default" type="button" id="paperButton">&#128478;</button>
+          <button class="btn btn-default" type="button" id="scissorsButton">&#9988;</button>
+        </span>
+      </div>
+    </div>
+    <br>
+
     <div class="row">
       <div class="col-xs-6">
         <div class="p1Score">
@@ -60,12 +71,13 @@
       <div class="col-xs-12">
         <form>
           <div class="form-group">
-            <label for=""><h3>Chat Console:</h1></label>
+            <label for="">
+              <h3>Chat Console:</h1></label>
             <textarea class="form-control" rows="5" id="chatConsole" readonly>Waiting for players...</textarea>
           </div>
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="Trash talk?" id="consoleInput">
-            <span class="input-group-btn"><button class="btn btn-default" type="button" id="submitText">Submit!</button></span>
+            <input type="text" class="form-control" placeholder="Taunt your opponent?" id="consoleInput">
+            <span class="input-group-btn"><button class="btn btn-default" type="button" id="submitText">Comment!</button></span>
           </div>
         </form>
       </div>
